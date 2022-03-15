@@ -20,25 +20,23 @@ const Searchbox = () => {
   }, [query]);
 
   return (
-    <div>
-      <div className="searchbox-container">
-        <div className="searchbox-input-container">
-          <Search />
-          <input
-            type="text"
-            placeholder="Search for people"
-            className="searchbox-input"
-            onInput={(e) => setQuery(e.target.value)}
-          />
-        </div>
-        <ul className={"search-list " + (query ? "" : "hidden")}>
-          {users.map((user) => (
-            <li key={user.id}>
-              <SearchResult user={user} />
-            </li>
-          ))}
-        </ul>
+    <div className="searchbox-container">
+      <div className="searchbox-input-container">
+        <Search />
+        <input
+          type="text"
+          placeholder="Search for people"
+          className="searchbox-input"
+          onInput={(e) => setQuery(e.target.value)}
+        />
       </div>
+      <ul className={"search-list " + (query ? "" : "hidden")}>
+        {users.map((user) => (
+          <li key={user.id}>
+            <SearchResult user={user} />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

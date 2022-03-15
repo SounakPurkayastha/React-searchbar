@@ -19,9 +19,11 @@
 
 .searchbox-container {
   width: 30%;
-  margin: 10px auto;
   border-radius: 16px;
   border: solid 2px #87ceeb;
+  height: auto;
+  margin: 0 auto;
+  background-color: white;
 }
 
 .search-list {
